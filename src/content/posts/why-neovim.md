@@ -114,6 +114,24 @@ nvim
 > 1. 在 Neovim 中通过`:Mason`命令安装 LSP 服务.
 > 2. 于`{pathTo}/nvim/lua/plugins/cmp.lua`中配置自动补全. _PS:可选操作_ > {% /aside %}
 
+### Step 6
+
+使用window系统的Terminal终端时, `<C-space>`会被系统拦截为输入法操作导致无法在Insert模式呼出CMP菜单
+
+可以在终端管理器中当前使用的powershell配置中添加快捷键配置, 使得`<C-space>`不会被拦截
+
+```json
+// setting.json
+{
+  "keybindings": [
+    {
+      "id": "User.sendInput.E116B028",
+      "keys": "ctrl+space"
+    }
+  ]
+}
+```
+
 ### Step Extra
 
 - 配置 im-select
@@ -170,5 +188,3 @@ VS code 体验不好, WebStorm 太吃电脑配置, 因此开始了使用终端�
 - 将依赖的环境放入到了 Neovim 的文件目录下
 - 了解到了终端与系统不同的代理模式
 - 更加灵活的配置插件的安装与加载
-
- 
